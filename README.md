@@ -1,5 +1,3 @@
----
-
 # 📊 Olist E-Commerce Customer Behavior Analysis
 
 ## 🔍 Overview
@@ -221,6 +219,5 @@ All analysis and insights were independently validated.
 
 If you found this project useful, consider giving it a ⭐
 
----
 
 
