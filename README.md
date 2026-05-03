@@ -1,11 +1,12 @@
+---
 
 # 📊 Olist E-Commerce Customer Behavior Analysis
 
 ## 🔍 Overview
 
-This project analyzes the **Olist Brazilian E-Commerce dataset (2016–2018)** to uncover key insights on customer behavior, delivery performance, and revenue drivers.
+This project analyzes the **Olist Brazilian E-Commerce dataset (2016–2018)** to uncover actionable insights on customer behavior, delivery performance, and revenue drivers.
 
-The goal is to translate raw transactional data into actionable business insightsthat can improve:
+The objective is to transform raw transactional data into **data-driven business recommendations** that improve:
 
 * Customer retention
 * Delivery efficiency
@@ -13,58 +14,60 @@ The goal is to translate raw transactional data into actionable business insight
 
 ---
 
-## 🎯 Key Highlights
+## 🎯 Key Metrics
 
-* 📦 **~100K orders analyzed**
-* 💰 **R$16M total revenue**
-* 🔁 **Low repeat purchase rate (~3%)**
-* ⭐ **Average review score: 4.08**
-* 🚚 **~20% orders delivered late (major issue)**
+* 📦 Total Orders: ~99K
+* 💰 Total Revenue: R$16M
+* 👥 Unique Customers: ~96K
+* 🔁 Repeat Purchase Rate: **~3% (very low)**
+* ⭐ Avg Review Score: 4.08
+* 🚚 Late Deliveries: **~20.7%**
 
 ---
 
 ## 📈 Key Insights
 
-### 1. Delivery Drives Customer Satisfaction
+### 🚚 Delivery Performance is Critical
 
-* Late deliveries significantly reduce review scores
+* Late deliveries significantly reduce customer satisfaction
 * Strong statistical evidence (p < 0.001)
-* One of the **biggest drivers of poor customer experience**
+* Major driver of negative reviews
 
 ---
 
-### 2. Weak Customer Retention
+### 🔁 Weak Customer Retention
 
-* Only ~3% repeat purchase rate
-* Cohort analysis shows sharp drop-off after first order
-* Indicates **lack of retention strategy**
+* Only ~3% repeat customers
+* Sharp drop-off after first purchase
+* Indicates missing retention strategy
 
 ---
 
-### 3. Purchase Behavior Patterns
+### ⏰ Customer Purchase Behavior
 
 * Peak ordering time: **10 AM – 4 PM**
-* Higher spending observed on **weekends**
-* Suggests **planned purchasing behavior**
+* Higher spending on weekends
+* Suggests intentional (non-impulsive) buying behavior
 
 ---
 
-### 4. Category Contribution
+### 🛍️ Product Category Trends
 
-* Top categories:
+Top revenue categories:
 
-  * Bed & Bath
-  * Health & Beauty
-  * Sports & Leisure
-* High revenue ≠ high satisfaction → potential quality gaps
+* Bed & Bath
+* Health & Beauty
+* Sports & Leisure
+
+⚠️ High revenue does not always mean high satisfaction
 
 ---
 
-### 5. Payment Trends
+### 💳 Payment Behavior
 
-* ~75% transactions via **credit card**
-* Higher order values compared to other methods
-* Indicates strong adoption of installment-based purchasing
+* ~75% transactions via credit card
+* Higher order values vs other methods
+* Strong adoption of installment-based purchasing
 
 ---
 
@@ -72,59 +75,102 @@ The goal is to translate raw transactional data into actionable business insight
 
 ### H1: Late deliveries reduce review scores
 
-* Result: ✅ Confirmed
+* ✅ Confirmed
 * Test: Mann-Whitney U
 * p-value < 0.001
 * Large effect size
 
 ---
 
-### H2: Product price affects satisfaction
+### H2: Product price influences satisfaction
 
-* Result: ✅ Confirmed
+* ✅ Confirmed
 * Test: Kruskal-Wallis
 * p-value < 0.05
-* Mid-to-high priced products show better satisfaction
+* Mid-to-high priced items perform better
 
 ---
 
 ## 🚀 Business Recommendations
 
-### 1. Improve Delivery Reliability (High Priority)
+### 1. Delivery Optimization (High Priority)
 
-* Use ML-based delivery predictions
+* ML-based delivery time prediction
 * Target ≥90% on-time delivery
-* Introduce proactive compensation for delays
+* Proactive compensation for delays
 
 ---
 
-### 2. Time-Based Marketing Strategy
+### 2. Smart Marketing Strategy
 
-* Focus campaigns between **10 AM – 2 PM**
+* Run campaigns between **10 AM – 2 PM**
 * Launch “Lunch Break Deals”
-* Push weekend bundle offers
+* Weekend bundle promotions
 
 ---
 
-### 3. Customer Retention Engine
+### 3. Retention Engine
 
 * Post-purchase engagement flows
 * Personalized recommendations
-* Incentivize second purchase within 60 days
+* Incentivize second purchase
 
 ---
 
 ## 🔮 Further Exploration
 
-* Does **first delivery experience impact long-term retention (LTV)?**
+* Impact of first delivery experience on long-term retention (LTV)
 * Cohort-based survival analysis
-* Delivery route optimization
-* Extended dataset for long-term trends
+* Logistics route optimization
+* Extended dataset for trend validation
 
+---
+
+## 📂 Dataset
+
+This project uses the Olist dataset from Kaggle:
+
+👉 [https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+
+Due to file size limitations, the dataset is **not included** in this repository.
+
+---
+
+## 📁 How to Run This Project
+
+### 1. Download Dataset
+
+Download from Kaggle and extract into a `data/` folder.
+
+### 2. Expected Structure
+
+```id="struct1"
+project/
+├── data/
+│   ├── orders.csv
+│   ├── customers.csv
+│   ├── order_items.csv
+│   └── ...
+├── notebook/
+│   └── Olist_EDA_HabuilCaseStudy.ipynb
+├── report/
+│   └── Olist_Data_Analysis_Report.pdf
+└── README.md
+```
+
+### 3. Run Notebook
+
+Open and run:
+
+```
+notebook/Olist_EDA_HabuilCaseStudy.ipynb
+```
+
+---
 
 ## 🛠️ Tech Stack
 
-* **Python**
+* Python
 * Pandas, NumPy
 * Matplotlib, Seaborn
 * SciPy (statistical testing)
@@ -133,35 +179,31 @@ The goal is to translate raw transactional data into actionable business insight
 
 ## 🤖 LLM Usage Disclosure
 
-* Models used:
+**Models Used:**
 
-  * ChatGPT (GPT-5.3)
-  * Claude (Anthropic Sonnet)
+* ChatGPT (GPT-5.3)
+* Claude (Anthropic Sonnet)
 
-### Used for:
+### Used For:
 
 * Code syntax suggestions
 * Statistical test templates
 * Visualization improvements
-* Structuring the report
+* Report structuring
 
-### Not used for:
+### Not Used For:
 
 * Core analysis execution
 * Business insights
 * Final conclusions
 
-All results and interpretations were independently validated.
+All analysis and insights were independently validated.
 
 ---
 
 ## 📎 Notebook
 
-👉 Add your link here:
-
-```
-https://github.com/your-username/olist-ecommerce-customer-behavior-analysis
-```
+👉 [https://github.com/your-username/olist-ecommerce-customer-behavior-analysis](https://github.com/your-username/olist-ecommerce-customer-behavior-analysis)
 
 ---
 
@@ -169,15 +211,16 @@ https://github.com/your-username/olist-ecommerce-customer-behavior-analysis
 
 **Hasini**
 
-* 🎓 Data Science Enthusiast
+* 🎓 Data Science Student
 * 💼 Aspiring Data Analyst / Data Scientist
 * 🔗 LinkedIn: [https://www.linkedin.com/in/hasini-p-694357261/](https://www.linkedin.com/in/hasini-p-694357261/)
 
 ---
 
-## ⭐ If you found this useful
+## ⭐ Support
 
-Give this repo a ⭐ — it helps visibility!
+If you found this project useful, consider giving it a ⭐
 
 ---
+
 
