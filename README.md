@@ -7,7 +7,7 @@ This project analyzes the **Olist Brazilian E-Commerce dataset (2016–2018)** t
 
 The goal is to translate raw transactional data into actionable business insightsthat can improve:
 
-*Customer retention
+* Customer retention
 * Delivery efficiency
 * Revenue growth
 
